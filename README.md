@@ -1,4 +1,4 @@
-# Music Player 🎵
+# Music Player
 
 Hey! This is a music playlist app I built inspired by Spotify. You can search for songs, create playlists, and actually play music - not just mock data, real audio playback!
 
