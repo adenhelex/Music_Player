@@ -1,4 +1,4 @@
-# Music Player 🎵
+# Music Player
 
 Hey there! This is a web-based music player I built using Next.js and TypeScript. It's got all the basic features you'd expect from a music player - play/pause, skip tracks, volume control, shuffle, repeat modes, and a working playlist.
 
