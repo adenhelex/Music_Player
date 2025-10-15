@@ -1,0 +1,223 @@
+export interface Song {
+  id: number;
+  title: string;
+  artist: string;
+  album: string;
+  duration: string;
+  cover: string;
+  audioUrl: string;
+  genre: string;
+}
+
+export const songsLibrary: Song[] = [
+  {
+    id: 1,
+    title: "Midnight Dreams",
+    artist: "Luna Eclipse",
+    album: "Night Sky",
+    duration: "3:45",
+    cover: "🌙",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    genre: "Electronic",
+  },
+  {
+    id: 2,
+    title: "Electric Sunset",
+    artist: "The Waves",
+    album: "Coastal Vibes",
+    duration: "4:20",
+    cover: "🌅",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    genre: "Pop",
+  },
+  {
+    id: 3,
+    title: "Urban Jungle",
+    artist: "City Beats",
+    album: "Metropolitan",
+    duration: "3:12",
+    cover: "🏙️",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    genre: "Hip Hop",
+  },
+  {
+    id: 4,
+    title: "Ocean Breeze",
+    artist: "Coastal Vibes",
+    album: "Seashore",
+    duration: "5:01",
+    cover: "🌊",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+    genre: "Chill",
+  },
+  {
+    id: 5,
+    title: "Mountain High",
+    artist: "Echo Valley",
+    album: "Summit",
+    duration: "4:33",
+    cover: "⛰️",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+    genre: "Rock",
+  },
+  {
+    id: 6,
+    title: "Neon Nights",
+    artist: "Synth Wave",
+    album: "Retro Future",
+    duration: "3:58",
+    cover: "🎆",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
+    genre: "Electronic",
+  },
+  {
+    id: 7,
+    title: "Starlight Serenade",
+    artist: "Luna Eclipse",
+    album: "Night Sky",
+    duration: "4:12",
+    cover: "⭐",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3",
+    genre: "Jazz",
+  },
+  {
+    id: 8,
+    title: "Desert Rose",
+    artist: "Nomad Souls",
+    album: "Wanderlust",
+    duration: "3:28",
+    cover: "🌵",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3",
+    genre: "World",
+  },
+  {
+    id: 9,
+    title: "Thunderstorm",
+    artist: "Nature's Call",
+    album: "Elements",
+    duration: "5:15",
+    cover: "⚡",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3",
+    genre: "Ambient",
+  },
+  {
+    id: 10,
+    title: "Butterfly Effect",
+    artist: "The Waves",
+    album: "Metamorphosis",
+    duration: "3:42",
+    cover: "🦋",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3",
+    genre: "Indie",
+  },
+  {
+    id: 11,
+    title: "Cosmic Journey",
+    artist: "Space Explorers",
+    album: "Beyond",
+    duration: "6:20",
+    cover: "🚀",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3",
+    genre: "Electronic",
+  },
+  {
+    id: 12,
+    title: "Cherry Blossom",
+    artist: "Zen Garden",
+    album: "Harmony",
+    duration: "4:05",
+    cover: "🌸",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3",
+    genre: "Classical",
+  },
+  {
+    id: 13,
+    title: "Fire Dance",
+    artist: "Rhythm Tribe",
+    album: "Primal",
+    duration: "3:55",
+    cover: "🔥",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3",
+    genre: "Latin",
+  },
+  {
+    id: 14,
+    title: "Winter Wonderland",
+    artist: "Frost & Snow",
+    album: "Seasons",
+    duration: "4:48",
+    cover: "❄️",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3",
+    genre: "Classical",
+  },
+  {
+    id: 15,
+    title: "Golden Hour",
+    artist: "Sunset Collective",
+    album: "Daylight",
+    duration: "3:33",
+    cover: "🌞",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3",
+    genre: "Folk",
+  },
+  {
+    id: 16,
+    title: "Midnight Groove",
+    artist: "City Beats",
+    album: "After Hours",
+    duration: "4:22",
+    cover: "🌃",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3",
+    genre: "R&B",
+  },
+  {
+    id: 17,
+    title: "Rainbow Dreams",
+    artist: "Color Spectrum",
+    album: "Vibrant",
+    duration: "3:17",
+    cover: "🌈",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    genre: "Pop",
+  },
+  {
+    id: 18,
+    title: "Mystic Forest",
+    artist: "Nature's Call",
+    album: "Wilderness",
+    duration: "5:30",
+    cover: "🌲",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    genre: "Ambient",
+  },
+  {
+    id: 19,
+    title: "Heart Beat",
+    artist: "Pulse",
+    album: "Life Force",
+    duration: "3:50",
+    cover: "❤️",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    genre: "Dance",
+  },
+  {
+    id: 20,
+    title: "Silent Night",
+    artist: "Peaceful Dreams",
+    album: "Lullabies",
+    duration: "4:15",
+    cover: "🌌",
+    audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+    genre: "Classical",
+  },
+];
+
+export interface Playlist {
+  id: string;
+  name: string;
+  description: string;
+  songIds: number[];
+  cover: string;
+  createdAt: Date;
+}
+

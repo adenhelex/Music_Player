@@ -1,120 +1,140 @@
 # Music Player 🎵
 
-Hey there! This is a web-based music player I built using Next.js and TypeScript. It's got all the basic features you'd expect from a music player - play/pause, skip tracks, volume control, shuffle, repeat modes, and a working playlist.
+Hey! This is a music playlist app I built inspired by Spotify. You can search for songs, create playlists, and actually play music - not just mock data, real audio playback!
 
 ## What it does
 
-Pretty straightforward - it plays music in your browser. You get:
-- Play, pause, and skip controls (obviously)
-- A progress bar you can actually drag to seek through songs
-- Volume slider with a mute button
-- Shuffle mode that doesn't just play the same "random" order every time
-- Repeat modes: off, repeat all, or repeat one song (for when you're obsessed with that one track)
-- A playlist sidebar that shows what's currently playing with a neat animation
-- Some gradient backgrounds because why not make it look nice
+So basically, you get a nice dark-themed music player where you can:
+- Search through a library of 20 songs (I added different genres to make it interesting)
+- Create as many playlists as you want
+- Add and remove songs from playlists
+- Actually play the music with full controls - play, pause, skip, shuffle, all that good stuff
+- Everything saves automatically in your browser, so your playlists stick around
 
-Works on mobile too, though I mainly tested it on desktop.
+## Quick start
 
-## Getting started
-
-Clone this repo, then:
+First, clone it and install dependencies:
 
 ```bash
+git clone https://github.com/adenhelex/Music_Player.git
+cd Music_Player
 npm install
+```
+
+Then just run it:
+
+```bash
 npm run dev
 ```
 
-Head to [http://localhost:3000](http://localhost:3000) and you should see it running.
+Open http://localhost:3001 (or whatever port it tells you) and you're good to go!
 
-**Note:** The sample tracks use audio files from soundhelix.com. They're royalty-free test music, so don't expect any bangers - just generic background music for testing.
+## How to use it
+
+### Playing songs
+Just browse the library and click the play button on any song. Pretty straightforward. The player controls are at the bottom - you can skip tracks, shuffle, repeat, adjust volume, etc.
+
+### Making playlists
+See that + button in the sidebar? Click it, give your playlist a name (and description if you want), and boom - new playlist. Each one gets a random emoji as its icon which I thought was fun.
+
+### Adding songs to playlists
+Hover over any song and you'll see a + button pop up. Click that and pick which playlist you want to add it to. The menu will show you which playlists already have that song so you don't accidentally add it twice.
+
+### Managing playlists
+Click any playlist in the sidebar to see what's in it. You can:
+- Remove songs (hover and hit the trash icon)
+- Rename the playlist (click the edit icon)
+- Delete the whole thing (red trash icon)
+
+### Searching
+There's a search bar at the top. Just start typing and it'll filter songs by title, artist, album, or genre in real-time. Pretty handy when you're looking for something specific.
+
+## The tech stack
+
+Built this with:
+- Next.js 15 and React 19
+- TypeScript (because types are helpful)
+- Tailwind CSS for styling
+- Lucide icons (they look nice)
+- Plain old localStorage for saving playlists
 
 ## Project structure
 
 ```
-app/
-  ├── globals.css          # Tailwind styles and CSS variables
-  ├── layout.tsx           # Root layout wrapper
-  └── page.tsx             # Main page component
-
 components/
-  ├── MusicPlayer.tsx      # The main player logic and UI
-  └── Playlist.tsx         # Playlist sidebar component
+  ├── MusicPlayer.tsx      # main component, has all the state
+  ├── SearchBar.tsx        # search box
+  ├── SongLibrary.tsx      # shows all songs
+  ├── PlaylistSidebar.tsx  # left sidebar with playlists
+  └── PlaylistView.tsx     # what you see when viewing a playlist
+
+lib/
+  └── songsData.ts         # the 20 songs and their info
+
+app/
+  ├── page.tsx             # home page
+  ├── layout.tsx           # app layout
+  └── globals.css          # global styles
 ```
 
-Pretty minimal setup. Everything happens in `MusicPlayer.tsx` - all the audio controls, state management, etc.
+## Design choices
 
-## Tech stack
+I went with a dark theme because, well, Spotify does it and it looks good for music apps. Used purple and blue gradients because they're easy on the eyes. Added hover effects and transitions everywhere to make it feel smooth and responsive.
 
-- **Next.js 15** - Using the App Router because it's 2025 and we're modern now
-- **TypeScript** - Type safety is nice, even for side projects
-- **Tailwind CSS** - For styling without writing actual CSS files
-- **Lucide React** - Clean icon library
-- **HTML5 Audio** - The built-in `<audio>` element does all the heavy lifting
+The layout is pretty standard - sidebar on the left for playlists, main area for songs, and the player stuck to the bottom so it's always accessible.
 
-No fancy state management libraries or anything. Just React hooks and local state.
+## Adding more songs
 
-## Adding your own music
-
-Open `components/MusicPlayer.tsx` and find the `sampleTracks` array (around line 17). Replace it with your own tracks:
+If you want to add songs, edit `lib/songsData.ts`. Just follow the same format:
 
 ```typescript
-const sampleTracks: Track[] = [
-  {
-    id: 1,
-    title: "Your Song Name",
-    artist: "Artist Name",
-    duration: "3:45",
-    cover: "🎸", // I used emojis but you could use image URLs
-    audioUrl: "/path/to/your/song.mp3", // or a full URL
-  },
-  // ... more tracks
-];
+{
+  id: 21,
+  title: "Song Name",
+  artist: "Artist Name",
+  album: "Album Name",
+  duration: "3:45",
+  cover: "🎵",
+  audioUrl: "your-audio-url.mp3",
+  genre: "Genre",
+}
 ```
 
-For local files, just drop your MP3s in the `public` folder and reference them like `/song.mp3`.
+The audio URLs I'm using are from SoundHelix (free demo tracks), but you can swap them for whatever.
 
-**Heads up:** CORS is a thing. If you're using external audio URLs, make sure they allow cross-origin requests or you'll get errors in the console.
+## Stuff to know
 
-## Customizing the look
+- Your playlists save to localStorage, so they'll be there when you come back
+- If you clear your browser data, your playlists go poof
+- Works best on Chrome or Firefox
+- Need a decent internet connection since the audio streams online
 
-The whole thing uses Tailwind, so if you want to change colors or styling:
+## Things I might add later
 
-- Main gradient background → `app/page.tsx` (line 8)
-- Player colors → Search for `purple-600` or `blue-600` in `components/MusicPlayer.tsx` and replace with whatever
-- Dark mode variables → `app/globals.css` (the `:root` section)
+- Drag and drop to reorder songs
+- Export/import playlists
+- Custom album art
+- Keyboard shortcuts
+- Lyrics maybe?
+- Better mobile support
 
-Want to change from purple/blue to like green/teal? Just find-replace the color classes. Tailwind makes it pretty painless.
+## Known quirks
 
-## Known issues / quirks
-
-- The duration formatting assumes your songs are under an hour. If you're trying to play a 2-hour podcast episode, you might see weird timestamps
-- Shuffle doesn't remember what it already played, so you might hear repeats before hearing all songs
-- On some browsers, the audio won't autoplay when you switch tracks until you've interacted with the page first (browser security thing, not much I can do about it)
-- If you spam the next/prev buttons super fast, the UI might lag a tiny bit
-
-## Building for production
-
-```bash
-npm run build
-npm start
-```
-
-Should work fine. I haven't deployed this anywhere yet but it's just a standard Next.js app so Vercel, Netlify, etc. should all work.
-
-## Contributing
-
-This is just a personal project but if you want to fork it and add features, go for it! Some ideas:
-- Add a volume visualizer
-- Save playlist state to localStorage
-- Add keyboard shortcuts
-- Support for playlists/albums beyond just a flat list
-- Actual album artwork instead of emojis lol
+- Audio files are demo tracks from SoundHelix, so they're all instrumental
+- No cloud storage, everything's local
+- Can't share playlists with other people (yet)
+- Playlist size limited by browser storage (but that's pretty big)
 
 ## License
 
-ISC - do whatever you want with it
+MIT - do whatever you want with it.
+
+## About
+
+Made this as a portfolio project. Wanted to build something fun and functional that shows I can handle complex React state and create a nice UI.
+
+If you find any bugs or have suggestions, feel free to open an issue!
 
 ---
 
-That's about it. Hope this is useful or at least a decent starting point for your own player. Happy listening! 🎧
-
+Built with Next.js and way too much coffee ☕
