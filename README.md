@@ -1,6 +1,6 @@
-# Music Player
+# Music Player 🎵
 
-Hey! This is a music playlist app I built inspired by Spotify. You can search for songs, create playlists, and actually play music - not just mock data, real audio playback!
+A fully functional Spotify-inspired music playlist application built by **Sikarin Kaewjutaniti**. Search through songs, create custom playlists, and enjoy real audio playback with a beautiful dark-themed interface.
 
 ## What it does
 
@@ -131,10 +131,11 @@ MIT - do whatever you want with it.
 
 ## About
 
-Made this as a portfolio project. Wanted to build something fun and functional that shows I can handle complex React state and create a nice UI.
+Built by **Sikarin Kaewjutaniti** as a portfolio project demonstrating modern React development skills, state management, and UI/UX design. This project showcases the ability to create complex, interactive applications with a focus on user experience and clean code architecture.
 
 If you find any bugs or have suggestions, feel free to open an issue!
 
 ---
 
-Built with Next.js and way too much coffee ☕
+**Author:** Sikarin Kaewjutaniti  
+**Built with:** Next.js and way too much coffee ☕

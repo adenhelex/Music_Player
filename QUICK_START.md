@@ -1,4 +1,6 @@
-# Quick Start
+# Quick Start Guide
+
+**Music Player** by Sikarin Kaewjutaniti - A Spotify-inspired playlist application
 
 ## Getting it running
 

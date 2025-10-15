@@ -1,6 +1,8 @@
 {
   "name": "music-player",
   "version": "1.0.0",
+  "description": "A Spotify-inspired music playlist application with search, playlist management, and real audio playback",
+  "author": "Sikarin Kaewjutaniti",
   "private": true,
   "scripts": {
     "dev": "next dev",
